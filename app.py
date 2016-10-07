@@ -67,13 +67,14 @@ def loginCheck():
         return "<center>User name doesn't exist!</center>"
 
 #read into the cs file
+#I HAVE AN ERROR HERE IN LINE 77
 def readFile():
     #open the file in readable
     with open('data.csv','r') as csvfile:
         dataReader = csv.reader(csvfile)
         #for each row
         for row in dataReader:
-            if row[0] != "Usr" and row[1] != "Pw" and (row[0] not in data) :
+            if row[0] != "usr" and row[1] != "pw" and (row[0] not in data) :
                 data[row[0]] = row[1]
 
 #write to the csv file
